@@ -1,0 +1,39 @@
+[package]
+name = "ioxd_querier"
+version = "0.1.0"
+edition = "2021"
+
+[dependencies]
+# Workspace dependencies, in alphabetical order
+clap_blocks = { path = "../clap_blocks" }
+data_types = { path = "../data_types" }
+generated_types = { path = "../generated_types" }
+iox_catalog = { path = "../iox_catalog" }
+ioxd_common = { path = "../ioxd_common" }
+metric = { path = "../metric" }
+object_store = "0.3.0"
+querier = { path = "../querier" }
+iox_query = { path = "../iox_query" }
+router = { path = "../router" }
+service_grpc_flight = { path = "../service_grpc_flight" }
+service_grpc_influxrpc = { path = "../service_grpc_influxrpc" }
+sharder = { path = "../sharder" }
+iox_time = { path = "../iox_time" }
+trace = { path = "../trace" }
+write_buffer = { path = "../write_buffer" }
+
+# Crates.io dependencies, in alphabetical order
+arrow-flight = "19.0.0"
+async-trait = "0.1"
+hyper = "0.14"
+thiserror = "1.0.32"
+tokio = { version = "1.20", features = ["macros", "net", "parking_lot", "rt-multi-thread", "signal", "sync", "time"] }
+tonic = "0.7"
+workspace-hack = { path = "../workspace-hack"}
+parquet_file = { version = "0.1.0", path = "../parquet_file" }
+
+[dev-dependencies]
+# Workspace dependencies, in alphabetical order
+iox_tests = { path = "../iox_tests" }
+
+# Crates.io dependencies, in alphabetical order

@@ -1,0 +1,15 @@
+[package]
+name = "influxdb_storage_client"
+version = "0.1.0"
+authors = ["Raphael Taylor-Davies <r.taylordavies@googlemail.com>"]
+edition = "2021"
+
+[dependencies]
+client_util = { path = "../client_util" }
+generated_types = { path = "../generated_types", default-features=false }
+prost = "0.10"
+tonic = { version = "0.7" }
+futures-util = { version = "0.3" }
+workspace-hack = { path = "../workspace-hack"}
+
+[dev-dependencies]

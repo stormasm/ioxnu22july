@@ -1,0 +1,41 @@
+[package]
+name = "query_tests"
+version = "0.1.0"
+authors = ["Andrew Lamb <andrew@nerdnetworks.org>"]
+edition = "2021"
+description = "Tests of the query engine against different database configurations"
+
+[dependencies]
+arrow = { version = "19.0.0", features = ["prettyprint"] }
+arrow_util = { path = "../arrow_util" }
+async-trait = "0.1"
+backoff = { path = "../backoff" }
+data_types = { path = "../data_types" }
+datafusion = { path = "../datafusion" }
+datafusion_util = { path = "../datafusion_util" }
+dml = { path = "../dml" }
+futures = "0.3"
+generated_types = { path = "../generated_types" }
+influxdb_iox_client = { path = "../influxdb_iox_client" }
+ingester = { path = "../ingester" }
+iox_catalog = { path = "../iox_catalog" }
+iox_tests = { path = "../iox_tests" }
+itertools = "0.10"
+mutable_batch = { path = "../mutable_batch" }
+mutable_batch_lp = { path = "../mutable_batch_lp" }
+once_cell = { version = "1.13.0", features = ["parking_lot"] }
+predicate = { path = "../predicate" }
+schema = { path = "../schema" }
+sharder = { path = "../sharder" }
+querier = { path = "../querier" }
+iox_query = { path = "../iox_query" }
+workspace-hack = { path = "../workspace-hack"}
+parquet_file = { version = "0.1.0", path = "../parquet_file" }
+
+[dev-dependencies]
+arrow = { version = "19.0.0", features = ["prettyprint"] }
+arrow_util = { path = "../arrow_util" }
+snafu = "0.7"
+tempfile = "3.1.0"
+test_helpers = { path = "../test_helpers" }
+tokio = { version = "1.20", features = ["macros", "parking_lot", "rt-multi-thread", "time"] }

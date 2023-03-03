@@ -1,0 +1,24 @@
+[package]
+name = "trace_http"
+version = "0.1.0"
+authors = ["Raphael Taylor-Davies <r.taylordavies@googlemail.com>"]
+edition = "2021"
+description = "Distributed tracing support for HTTP services"
+
+[dependencies]
+
+trace = { path = "../trace" }
+futures = "0.3"
+hashbrown = "0.12"
+http = "0.2"
+http-body = "0.4"
+itertools = "0.10"
+metric = { path = "../metric" }
+observability_deps = { path = "../observability_deps" }
+parking_lot = "0.12"
+pin-project = "1.0"
+snafu = "0.7"
+tower = "0.4"
+workspace-hack = { path = "../workspace-hack"}
+
+[dev-dependencies]
